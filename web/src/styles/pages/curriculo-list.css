@@ -1,0 +1,103 @@
+#page-list {
+  height: 100vh;
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-list main {
+  overflow: auto;
+  width: 1200px;
+  height: 600px;
+
+  display: flex;
+}
+
+.curriculo-list {
+  width: calc(100% - 320px);
+  height: 100%;
+  background: #fffbe8;
+  border-radius: 15px;
+
+  margin-left: 20px;
+
+  padding: 30px;
+  border: 1px solid #684300;
+
+  position: relative;
+}
+
+.curriculo-list header {
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.curriculo-list header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffd600;
+}
+
+.curriculo-list header h1::after {
+  content: '';
+  width: 80%;
+  background: #ffd600;
+  height: 4px;
+  display: block;
+  margin: 3px auto;
+}
+
+.curriculos {
+  position: absolute;
+
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.curriculos img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.curriculos img:hover {
+  z-index: 1;
+  opacity: 0.8;
+  transform: scale(1.25);
+}
+
+.curriculos a {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+#page-list .create-curriculo {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+
+  width: 64px;
+  height: 64px;
+  background: #ffd600;
+  border-radius: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+#page-list .create-curriculo:hover {
+  background: #ffdf2c;
+}

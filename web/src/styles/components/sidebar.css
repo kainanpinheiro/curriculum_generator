@@ -1,0 +1,68 @@
+aside.app-sidebar {
+  position: relative;
+
+  width: 320px;
+  height: 100%;
+  background: #fffbe8;
+  border-radius: 15px;
+
+  padding: 30px;
+
+  border: 1px solid #684300;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+aside.app-sidebar header {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+aside.app-sidebar h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffd600;
+}
+
+aside.app-sidebar header img {
+  margin-top: 100px;
+  height: 240px;
+  opacity: 0.4;
+}
+
+aside.app-sidebar footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+aside.app-sidebar footer p {
+  color: #684300;
+  font-size: 18px;
+}
+
+aside.app-sidebar footer button {
+  width: 65px;
+  height: 65px;
+
+  border: 0;
+
+  background: #684300;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside.app-sidebar footer button:hover {
+  background: #ffd600;
+}

@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../images/banana-bg.jpg');
+}
+
+body,
+input,
+button,
+textarea {
+  font: 600 18px Krona One, sans-serif;
+}
