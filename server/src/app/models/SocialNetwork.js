@@ -5,7 +5,6 @@ class SocialNetwork extends Model {
     super.init(
       {
         url: Sequelize.STRING,
-        social: Sequelize.STRING,
       },
       {
         sequelize,

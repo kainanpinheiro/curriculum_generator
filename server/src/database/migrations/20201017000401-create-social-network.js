@@ -13,10 +13,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      social: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
       curriculo_id: {
         type: Sequelize.INTEGER,
         references: {

@@ -30,10 +30,6 @@ class Curriculo extends Model {
       foreignKey: 'curriculo_id',
       as: 'social_network',
     });
-    this.hasMany(models.Course, {
-      foreignKey: 'curriculo_id',
-      as: 'courses',
-    });
     this.hasMany(models.Graduation, {
       foreignKey: 'curriculo_id',
       as: 'graduations',

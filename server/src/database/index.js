@@ -4,7 +4,6 @@ import Curriculo from '../app/models/Curriculo';
 import Image from '../app/models/Image';
 import Address from '../app/models/Address';
 import SocialNetwork from '../app/models/SocialNetwork';
-import Course from '../app/models/Course';
 import Graduation from '../app/models/Graduation';
 import Experience from '../app/models/Experience';
 import Skill from '../app/models/Skill';
@@ -16,7 +15,6 @@ const models = [
   Image,
   Address,
   SocialNetwork,
-  Course,
   Graduation,
   Experience,
   Skill,
