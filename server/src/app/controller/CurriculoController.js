@@ -1,7 +1,6 @@
 import Curriculo from '../models/Curriculo';
 import Image from '../models/Image';
 import Address from '../models/Address';
-import SocialNetwork from '../models/SocialNetwork';
 import Graduation from '../models/Graduation';
 import Experience from '../models/Experience';
 import Skill from '../models/Skill';
@@ -9,7 +8,16 @@ import Skill from '../models/Skill';
 class CurriculoController {
   async index(req, res) {
     const curriculo = await Curriculo.findAll({
-      attributes: ['id', 'name', 'phone_number', 'email', 'objective', 'role'],
+      attributes: [
+        'id',
+        'name',
+        'phone_number',
+        'email',
+        'objective',
+        'role',
+        'github',
+        'linkedin',
+      ],
       include: [
         {
           model: Image,
@@ -19,11 +27,6 @@ class CurriculoController {
         {
           model: Address,
           as: 'address',
-        },
-        {
-          model: SocialNetwork,
-          as: 'social_network',
-          attributes: ['id', 'url', 'social'],
         },
         {
           model: Graduation,
@@ -51,7 +54,16 @@ class CurriculoController {
 
     const curriculo = await Curriculo.findOne({
       where: { id },
-      attributes: ['id', 'name', 'phone_number', 'email', 'objective', 'role'],
+      attributes: [
+        'id',
+        'name',
+        'phone_number',
+        'email',
+        'objective',
+        'role',
+        'github',
+        'linkedin',
+      ],
       include: [
         {
           model: Image,
@@ -61,11 +73,6 @@ class CurriculoController {
         {
           model: Address,
           as: 'address',
-        },
-        {
-          model: SocialNetwork,
-          as: 'social_network',
-          attributes: ['id', 'url', 'social'],
         },
         {
           model: Graduation,
@@ -99,10 +106,17 @@ class CurriculoController {
   }
 
   async store(req, res) {
-    const { name, phone_number, email, objective, role } = req.body;
+    const {
+      name,
+      phone_number,
+      email,
+      objective,
+      role,
+      github,
+      linkedin,
+    } = req.body;
     const { filename: path } = req.file;
     const { district, city, state } = req.body;
-    const { urls } = req.body;
     const { graduationsReq } = req.body;
     const { experiencesReq } = req.body;
     const { skills } = req.body;
@@ -123,16 +137,14 @@ class CurriculoController {
       email,
       objective,
       role,
+      github,
+      linkedin,
       image_id,
       address_id,
     });
     const curriculo_id = curriculo.id;
 
-    urls.forEach(async (url) => {
-      await SocialNetwork.create({ url, curriculo_id });
-    });
-
-    graduationsReq.forEach(async (graduations) => {
+    JSON.parse(graduationsReq).forEach(async (graduations) => {
       const { institution, course, start, end } = graduations;
 
       await Graduation.create({
@@ -144,7 +156,7 @@ class CurriculoController {
       });
     });
 
-    experiencesReq.forEach(async (experiences) => {
+    JSON.parse(experiencesReq).forEach(async (experiences) => {
       const { company, role, description } = experiences;
 
       await Experience.create({
@@ -155,14 +167,14 @@ class CurriculoController {
       });
     });
 
-    skills.forEach(async (skill) => {
+    JSON.parse(skills).forEach(async (skill) => {
       await Skill.create({
         skill,
         curriculo_id,
       });
     });
 
-    return res.status(201).json({ message: 'success' });
+    return res.status(201).json(req.body);
   }
 }
 

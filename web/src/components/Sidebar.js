@@ -10,7 +10,7 @@ const Sidebar = ({ button }) => {
   const { goBack } = useHistory();
 
   return (
-    <aside class="app-sidebar">
+    <aside className="app-sidebar">
       <header>
         <h1>Frexcurrículo</h1>
         <img src={bananaIcon} alt="Logo" />

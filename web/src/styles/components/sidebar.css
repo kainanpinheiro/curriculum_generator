@@ -61,6 +61,8 @@ aside.app-sidebar footer button {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: background-color 0.2s;
 }
 
 aside.app-sidebar footer button:hover {

@@ -6,6 +6,8 @@ class Curriculo extends Model {
       {
         name: Sequelize.STRING,
         phone_number: Sequelize.STRING,
+        github: Sequelize.STRING,
+        linkedin: Sequelize.STRING,
         email: Sequelize.STRING,
         role: Sequelize.STRING,
         objective: Sequelize.TEXT,
@@ -25,10 +27,6 @@ class Curriculo extends Model {
     this.belongsTo(models.Address, {
       foreignKey: 'address_id',
       as: 'address',
-    });
-    this.hasMany(models.SocialNetwork, {
-      foreignKey: 'curriculo_id',
-      as: 'social_network',
     });
     this.hasMany(models.Graduation, {
       foreignKey: 'curriculo_id',

@@ -13,6 +13,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      github: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      linkedin: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       phone_number: {
         type: Sequelize.STRING,
         allowNull: false,

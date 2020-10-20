@@ -23,6 +23,7 @@
   border-radius: 15px;
 
   margin-left: 20px;
+  overflow: auto;
 
   padding: 30px;
   border: 1px solid #684300;
@@ -53,20 +54,21 @@
 }
 
 .curriculos {
-  position: absolute;
+  padding: 40px;
+  width: 100%;
+  height: auto;
+
+  position: relative;
 
   margin-top: 10px;
-
-  display: flex;
-  flex-direction: row;
 }
 
 .curriculos img {
   width: 100px;
   height: 100px;
-  display: block;
-  overflow: hidden;
   transition: 0.5s;
+
+  margin-top: 15px;
 }
 
 .curriculos img:hover {

@@ -1,0 +1,168 @@
+#page-curriculo {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-curriculo main {
+  width: 1200px;
+  height: 600px;
+
+  display: flex;
+
+  position: relative;
+}
+
+.grid {
+  width: calc(100% - 320px);
+  height: 100%;
+  background: #fffbe8;
+  border-radius: 15px 0 0 15px;
+
+  margin-left: 20px;
+
+  padding: 50px;
+  border: 1px solid #684300;
+
+  overflow: auto;
+}
+
+.curriculo-details header {
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+  position: relative;
+}
+
+.curriculo-details img {
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.title h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.title span {
+  font-size: 14px;
+  color: #b5b5b5;
+}
+
+.redes {
+  height: 50px;
+  width: 80px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redes ul li {
+  list-style: none;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.curriculo-details .private-details {
+  width: 100%;
+  height: 100px;
+  margin-top: 15px;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  border-top: 1px solid #e0e0e0;
+}
+
+.private-details .private {
+  width: 100px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.private-details .private h2 {
+  font-size: 12px;
+  margin-top: 35px;
+}
+
+.private-details .private span {
+  font-size: 9px;
+  margin-top: 5px;
+  font-weight: normal;
+  color: #b5b5b5;
+}
+
+.intro {
+  margin-top: 20px;
+  height: auto;
+
+  display: flex;
+  overflow: hidden;
+}
+
+.intro + .intro {
+  margin-top: 40px;
+}
+
+.intro header {
+  width: 150px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.intro h2 {
+  font-size: 18px;
+  width: 200px;
+}
+
+.intro .intro-text {
+  height: auto;
+  width: 100%;
+
+  margin-left: 40px;
+
+  text-align: left;
+  line-height: 20px;
+}
+
+.intro .intro-text p {
+  font-size: 12px;
+  font-weight: normal;
+  color: #636363;
+}
+
+.skills-container {
+  max-width: 100%;
+  height: auto;
+}
+
+.skills-container span {
+  display: inline-block;
+  background: #ffd600;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+  padding: 6px;
+
+  font-size: 12px;
+}
